@@ -20,6 +20,7 @@ public class PelletSpawner : MonoBehaviour
     private void Start()
     {
         _arenaExtents = _arenaSize * 0.5f;
+        
     }
 
     public void SpawnPellets()
@@ -47,6 +48,7 @@ public class PelletSpawner : MonoBehaviour
     private void SpawnPellet(Vector2 position)
     {
         Vector3 worldPosition = new Vector3(position.x, 0f, position.y);
+        Debug.Log("Pellet spawn ediliyor: " + worldPosition);
         GameObject pellet = Instantiate(_pelletPrefab, worldPosition, Quaternion.identity);
     }
     
